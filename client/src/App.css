@@ -10,7 +10,7 @@ body{
     border-radius: 30px;
     display: inline-block;
     position: relative;
-    top: 50%;
+    top: 350px;
     left: 50%;
 }
 h2 {
@@ -82,4 +82,102 @@ h2 {
   color: #007FFF;
   font-style: italic;
   font-size: 16px;
+}
+
+/*Sign Up Form*/
+.sign-up-form {
+  width: 590px;
+  height: 580px;
+  background: #001E3C;
+  border: solid 1px #265D97;
+  border-radius: 30px;
+  display: inline-block;
+  position: relative;
+  top: 350px;
+  left: 50%;
+}
+
+.input-container-name {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -95px;
+  margin: 0 auto;
+}
+
+.input-container-email {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -75px;
+  margin: 0 auto;
+}
+
+.input-container-username-signup {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -55px;
+  margin: 0 auto;
+}
+
+.input-container-password-signup {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -35px;
+  margin: 0 auto;
+
+}
+
+#fullName {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+
+#email {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+
+.button-signup {
+  background: #007FFF;
+  color: white;
+  width: 120px;
+  letter-spacing: 2px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  top: 5px;
+}
+.upload-image {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: 400px;
+  top: 40px;
+
+}
+
+#upload-image {
+  height: 120px;
+  width: 120px;
+  font-size: 10px;
+  border-radius: 50%;
+  background: #001E3C;
+  color: white;
+  border: solid 1px #265D97;
+  font-style: italic;
 }
