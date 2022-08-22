@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import * as React from 'react';
+// import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+import Login from './Components/Login';
+
 function App() {
+
+  // const [favorites, setFavorites] = useState(0)
+  // const [profile, setProfile] = useState(0)
+
+  // useEffect( () => {
+  //   fetch('http://localhost:3000')
+  //   .then(res => res.json())
+  //   .then((data) => setFavorites(data))
+  // }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+   
+    <Routes>
+      <Route path="/" element={<Login />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
