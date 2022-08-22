@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  has_secure_password
   before_action :set_user, only: [:show, :update, :destroy]
+  before_action :logged_in_user, only [:show]
 
   # GET /users
   def index
@@ -18,6 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      log_in @user
       render json: @user, status: :created, location: @user
     else
       render json: @user.errors, status: :unprocessable_entity
