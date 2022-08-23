@@ -88,7 +88,7 @@ const handleBioChange = e => setBio(e.target.value)
                 {/* {renderErrorMessage("pass")} */}
    </div>
    <div className="input-container-bio-signup">
-        <label>Password</label>
+        <label>Bio</label>
         <br />
         <br />
             <input onChange={handleBioChange} value={bio} id="bio" type="bio" placeholder="BIO" name="bio" required />
