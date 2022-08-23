@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :attachments
   resources :repositories
-  resources :users, only: [create]
+  resources :users, only: [:create]
 
   get '/me', to: 'sessions#show'
   post '/login', to: 'sessions#create'

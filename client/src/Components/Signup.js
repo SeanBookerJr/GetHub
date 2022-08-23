@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Signup({user, setUser}) {
+
+    let navigate = useNavigate(); 
 
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
@@ -17,13 +20,17 @@ const handleSignUpForm = (e) => {
 
     e.preventDefault()
 
+    const formData = new FormData()
+    formData.append("username", userName)
+    formData.append("password", userName)
+    formData.append("first_name", firstName)
+    formData.append("last_name", lastName)
+    formData.append("email", email)
+    formData.append("bio", bio)
+
     fetch('/users', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accepts': 'application/json'
-          },
-          body: JSON.stringify({ userName, password, firstName, lastName, email, bio})
+          body: formData
         })
         .then(res => {
             if (res.ok) {
@@ -32,6 +39,7 @@ const handleSignUpForm = (e) => {
                     console.log(data)
                     setErrors([])
                     setUser(data)
+                    navigate('./Profile')
                 })
             } else {
                 res.json()

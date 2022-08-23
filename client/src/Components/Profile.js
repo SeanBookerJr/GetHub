@@ -1,11 +1,11 @@
 import React from 'react';
-import Login from './Login';
 import { useNavigate } from 'react-router';
 
 
 function Profile({user, setUser}) {
 
     let navigate = useNavigate()
+
 
 
 
@@ -42,31 +42,25 @@ function Profile({user, setUser}) {
             <h2>My Bio</h2>
                 <div className="profile-image"></div>
                 <label>Name:</label>
+                {/* <input id="input-value" type="text" placeholder="Name" name="name" /> */}
+                <p>{user.first_name} {user.last_name} </p> 
                 <br/>
+                <label>Username:</label>
+                {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
+                <p>{user.username}</p>
                 <br/>
-                <input id="input-value" type="text" placeholder="Name" name="name" />
-                <br/>
+                <label>Password:</label>
+                {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
+                <p>{user.password}</p>
                 <br/>
                 <label>A little about me:</label>
-                <br/>
-                <br/>
-                <input id="input-value" type="text" placeholder="Bio" name="bio" />
-                <br/>
+                {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
+                <p>{user.bio}</p>
                 <br/>
                 <label>Email Address:</label>
+                {/* <input id="input-value" type="text" placeholder="Email" name="email" /> */}
+                <p>{user.email}</p>
                 <br/>
-                <br/>
-                <input id="input-value" type="text" placeholder="Email" name="email" />
-                <br/>
-                <label>Contact:</label>
-                <br/>
-                <br/>
-                <input id="input-value" type="text" placeholder="Contact" name="contact" />
-                <br/>
-                <label>Languages:</label>
-                <br/>
-                <br/>
-                <input id="input-value" type="text" placeholder="Languages" name="languages" />
 
         </div>
 

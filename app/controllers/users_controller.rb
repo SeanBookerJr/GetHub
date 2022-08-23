@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    @user = User.create!(user_params)
 
     if @user.save
       log_in @user
@@ -47,6 +47,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :password_digest, :first_name, :last_name, :email, :bio)
+      params.permit(:username, :password, :first_name, :last_name, :email, :bio)
     end
 end
