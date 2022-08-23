@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 function Profile() {
+    let navigate = useNavigate();
+
+    function handleViewClick(event) {
+        navigate('./Repo')
+    }
     return(
         
     <div className="profile-container">
@@ -18,7 +24,7 @@ function Profile() {
         <div className="repo-section">
             <div className="repo-titles">
                 <h2>Repo Title Placeholder</h2>
-                <button className="view">View</button>
+                <button className="view" onClick={handleViewClick}>View</button>
 
             </div>
         </div>

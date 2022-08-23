@@ -6,6 +6,7 @@ import './App.css';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Profile from './Components/Profile';
+import Repo from './Components/Repo';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <Route path="/" element={<Login user={user} setUser={setUser}/>} />
       <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
       <Route path="/Profile" element={<Profile />} />
+      <Route path="/Repo" element={<Repo />} />
     </Routes>
     <button onClick={handleLogout}>Logout</button>
   </BrowserRouter>
