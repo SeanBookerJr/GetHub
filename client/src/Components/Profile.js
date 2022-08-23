@@ -1,11 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import Repo from './Repo';
 
 
-function Profile({user, setUser}) {
+
+function Profile({setUser}) {
 
     let navigate = useNavigate()
 
+    function handleViewClick(event) {
+        navigate('/Repo')
+    }
 
 
 
@@ -16,8 +21,8 @@ function Profile({user, setUser}) {
         setUser({})
         navigate('/')
       }
+    
      
-
     return(
         
     <div className="profile-container">
@@ -32,9 +37,11 @@ function Profile({user, setUser}) {
             <button className="my-favorites">My Favorites</button>
         </div>
         <div className="repo-section">
+           
             <div className="repo-titles">
+            
                 <h2>Repo Title Placeholder</h2>
-                <button className="view">View</button>
+                <button className="view" onClick={handleViewClick}>View</button>
 
             </div>
         </div>
