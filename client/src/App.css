@@ -35,25 +35,7 @@ h2 {
 
 }
 
-#username {
-  background: #132F4C;
-  border-radius: 11px;
-  width: 100%;
-  height: 35px;
-  border: solid 1px #265D97;
-  color: white;
-  
-}
 
-#password {
-  background: #132F4C;
-  border-radius: 11px;
-  width: 100%;
-  height: 35px;
-  border: solid 1px #265D97;
-  color: white;
-  
-}
 .button-container {
   display: flex;
   justify-content: center;
@@ -87,7 +69,7 @@ h2 {
 /*Sign Up Form*/
 .sign-up-form {
   width: 590px;
-  height: 580px;
+  height: 650px;
   background: #001E3C;
   border: solid 1px #265D97;
   border-radius: 30px;
@@ -97,11 +79,18 @@ h2 {
   left: 50%;
 }
 
-.input-container-name {
+.input-container-first-name {
   max-width: 75%;
   justify-content: center;
   position: relative;
-  top: -95px;
+  top: -120px;
+  margin: 0 auto;
+}
+.input-container-last-name {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -100px;
   margin: 0 auto;
 }
 
@@ -109,7 +98,7 @@ h2 {
   max-width: 75%;
   justify-content: center;
   position: relative;
-  top: -75px;
+  top: -80px;
   margin: 0 auto;
 }
 
@@ -117,7 +106,7 @@ h2 {
   max-width: 75%;
   justify-content: center;
   position: relative;
-  top: -55px;
+  top: -60px;
   margin: 0 auto;
 }
 
@@ -125,12 +114,27 @@ h2 {
   max-width: 75%;
   justify-content: center;
   position: relative;
-  top: -35px;
+  top: -40px;
   margin: 0 auto;
-
+}
+.input-container-bio-signup {
+  max-width: 75%;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
 }
 
-#fullName {
+#firstName {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+#lastName {
   background: #132F4C;
   border-radius: 11px;
   width: 60%;
@@ -141,6 +145,35 @@ h2 {
 }
 
 #email {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+#username {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+
+#password {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  
+}
+
+#bio {
   background: #132F4C;
   border-radius: 11px;
   width: 60%;
@@ -160,7 +193,7 @@ h2 {
   border: solid 1px #265D97;
   border-radius: 11px;
   position: relative;
-  top: 5px;
+  top: 20px;
 }
 .upload-image {
   height: 120px;
