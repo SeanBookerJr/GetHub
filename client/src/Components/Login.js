@@ -16,6 +16,10 @@ function Login({user, setUser}) {
   //   <div className="error">{errorMessages.message}</div>
   // );
 
+  function handleLoginClick(event){
+      navigate('./Profile')
+  }
+
   function handleSignUpClick(event){
       navigate('./Signup')
   }
@@ -80,7 +84,7 @@ function Login({user, setUser}) {
                     {/* {renderErrorMessage("pass")} */}
        </div>
        <div className="button-container">
-         <button  className="button" type="submit">LOGIN</button>
+         <button className="button" type="submit" onClick={handleLoginClick}>LOGIN</button>
        </div>
        <div className="sign-up-button">
            <button className="signup" onClick={handleSignUpClick}>Sign Up</button>

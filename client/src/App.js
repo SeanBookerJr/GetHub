@@ -5,6 +5,7 @@ import './App.css';
 
 import Login from './Components/Login';
 import Signup from './Components/Signup';
+import Profile from './Components/Profile';
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login user={user} setUser={setUser}/>} />
       <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
-
+      <Route path="/Profile" element={<Profile />} />
     </Routes>
     <button onClick={handleLogout}>Logout</button>
   </BrowserRouter>
