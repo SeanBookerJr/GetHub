@@ -181,3 +181,147 @@ h2 {
   border: solid 1px #265D97;
   font-style: italic;
 }
+/*Profile*/
+
+
+.profile-container {
+  max-width: 1400px;
+  height: 850px;
+  border: solid 1px #265D97;
+  background: #001E3C;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+
+.header {
+  background: #132F4C;
+  border: solid 1px #265D97;
+  border-radius: 30px;
+  width: 95%;
+  height: 150px;
+  position: relative;
+  top: 5%;
+  left: 2.3%;
+  display: inline-block;
+}
+#search {
+  background: #001E3C;
+  border: solid 1px #265D97;
+  width: 60%;
+  height: 30px;
+  border-radius: 12px;
+  position: relative;
+  left: 2%;
+  color: white;
+  bottom: 15px;
+}
+#search-button {
+  background: #007FFF;
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  bottom: 15px;
+  left: 3%;
+}
+h1 {
+  position: relative;
+  left: 3%;
+}
+.my-favorites {
+  background: #001E3C;
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  bottom: 50px;
+  left: 74%;
+}
+
+.logout {
+  background: #001E3C;
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  bottom: 55px;
+  left: 89%;
+}
+.bio {
+  width: 20%;
+  height: 70%;
+  background: #132F4C;
+  border-radius: 30px;
+  border: solid 1px #265D97;
+  position: relative;
+  bottom: 63%;
+  left: 77%;
+}
+.repo-section {
+  width: 73%;
+  height: 70%;
+  background: #132F4C;
+  border-radius: 30px;
+  border: solid 1px #265D97;
+  position: relative;
+  top: 7%;
+  left: 2%;
+}
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #001E3C;
+  margin: 0 auto;
+}
+
+label {
+  position: relative;
+  left: 5%;
+  
+}
+
+.repo-titles {
+  width: 95%;
+  height: 100px;
+  background: #001E3C;
+  border: solid 1px #265D97;
+  border-radius: 30px;
+  position: relative;
+  top: 4%;
+  left: 2%;
+}
+.view {
+  background: #001E3C;
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  bottom: 35px;
+  left: 84%;
+}
+#input-value {
+  background: #132F4C;
+  border-radius: 11px;
+  width: 60%;
+  height: 35px;
+  border: solid 1px #265D97;
+  color: white;
+  position: relative;
+  left:3%;
+}
+
