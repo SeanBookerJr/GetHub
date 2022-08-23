@@ -1,9 +1,13 @@
 import React from 'react';
 
 
+
 function Repo() {
     return (
-        <div></div>
+        <div className="repo-container">
+            <p>Hello</p>
+
+        </div>
     )
 
 }

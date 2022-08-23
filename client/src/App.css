@@ -358,3 +358,16 @@ label {
   left:3%;
 }
 
+/*Repo.js*/
+
+.repo-container {
+  max-width: 1400px;
+  height: 850px;
+  border: solid 1px #265D97;
+  background: #001E3C;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+
