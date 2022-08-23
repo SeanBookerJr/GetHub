@@ -4,15 +4,13 @@ import Repo from './Repo';
 
 
 
-function Profile({setUser}) {
+function Profile({user, setUser}) {
 
     let navigate = useNavigate()
 
     function handleViewClick(event) {
         navigate('/Repo')
     }
-
-
 
     function handleLogout(e) {
         fetch('/logout', {
