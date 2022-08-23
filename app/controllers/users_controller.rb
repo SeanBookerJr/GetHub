@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  has_secure_password
-  before_action :set_user, only: [:show, :update, :destroy]
-  before_action :logged_in_user, only: [:show]
+  skip_before_action :authorize, only: [:create]
 
   # GET /users
   def index

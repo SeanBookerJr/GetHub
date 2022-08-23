@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -8,23 +8,38 @@ import Signup from './Components/Signup';
 
 function App() {
 
-  // const [favorites, setFavorites] = useState(0)
-  // const [profile, setProfile] = useState(0)
+  const [user, setUser] = useState({})
 
-  // useEffect( () => {
-  //   fetch('http://localhost:3000')
-  //   .then(res => res.json())
-  //   .then((data) => setFavorites(data))
-  // }, [])
+  useEffect( () => {
+    fetch('/me')
+    .then(res => {
+      if (res.ok) {
+        res.json()
+        .then(data => {
+          setUser(data)
+        })
+      }
+    })
+  }, [])
+
+ const handleLogout = () => {
+   fetch('/logout', {
+     method: 'DELETE'
+   })
+   setUser({})
+ }
+
 
   return (
     <BrowserRouter>
 
    
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/Signup" element={<Signup />} />
+      <Route path="/" element={<Login user={user} setUser={setUser}/>} />
+      <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
+
     </Routes>
+    <button onClick={handleLogout}>Logout</button>
   </BrowserRouter>
   );
 }
