@@ -23,13 +23,6 @@ function App() {
     })
   }, [])
 
- const handleLogout = () => {
-   fetch('/logout', {
-     method: 'DELETE'
-   })
-   setUser({})
- }
-
 
   return (
     <BrowserRouter>
@@ -38,9 +31,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Login user={user} setUser={setUser}/>} />
       <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
-      <Route path="/Profile" element={<Profile />} />
+      <Route path="/Profile" element={<Profile user={user} setUser={setUser} />} />
     </Routes>
-    <button onClick={handleLogout}>Logout</button>
   </BrowserRouter>
   );
 }
