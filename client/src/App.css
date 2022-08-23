@@ -360,7 +360,7 @@ label {
 
 /*Repo.js*/
 
-.repo-container {
+#repo-container {
   max-width: 1400px;
   height: 850px;
   border: solid 1px #265D97;
@@ -369,5 +369,16 @@ label {
   margin: 0 auto;
   position: relative;
   top: 20px;
+}
+
+#mini-repo-container {
+  width: 95%;
+  height: 100px;
+  background: #001E3C;
+  border: solid 1px #265D97;
+  border-radius: 30px;
+  position: relative;
+  top: 4%;
+  left: 2%;
 }
 
