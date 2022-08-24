@@ -2,6 +2,19 @@ body{
   background: #001E3C;
   color: white;
 }
+#logo-img {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 45.5%;
+  top: 140px;
+}
+#app-name {
+  position: relative;
+  right: 3.5%;
+  top: 140px;
+  font-weight: 800;
+}
 .login-card {
     width: 380px;
     height: 430px;
@@ -313,6 +326,8 @@ h1 {
   position: relative;
   top: 5%;
   left: 5%;
+  font-weight: 800;
+  color: #007FFF;
 }
 ::placeholder {
   color: white;
@@ -327,6 +342,7 @@ h1 {
   top: 7%;
   height: 70px;
   width: 90%;
+  resize: none;
 }
 #profile-info {
   position:relative;
@@ -335,6 +351,17 @@ h1 {
   left: 5%;
   top: 4%;
 }
+#input-info {
+  background: #132F4C;
+  color: white;
+  border: none;
+  position: relative;
+  left: 5%;
+  top: 7%;
+  height: 20px;
+  width: 90%;
+}
+
 .repo-section {
   width: 73%;
   height: 70%;
@@ -395,6 +422,7 @@ label {
   left: 5%;
   bottom: 12%;
   font-weight: 600;
+  color: #007FFF;
 }
 
 #input-value {

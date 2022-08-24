@@ -59,10 +59,11 @@ function Profile({user, setUser}) {
                 <label id="profile-label">Name:</label>
                 {/* <input id="input-value" type="text" placeholder="Name" name="name" /> */}
                 <p id="profile-info">{user.first_name} {user.last_name} </p> 
-                <br/>
+                
                 <label id="profile-label">Username:</label>
                 {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
-                <p id="profile-info">{user.username}</p>
+                <input id="input-info" placeholder={user.username} name="username"/>
+                <br/>
                 <br/>
                 <label id="profile-label">Password:</label>
                 {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
