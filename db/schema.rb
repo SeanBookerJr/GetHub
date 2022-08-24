@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2022_08_23_143913) do
     t.integer "user_id"
     t.string "title"
     t.string "description"
-    t.string "repo_branch"
     t.string "tag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

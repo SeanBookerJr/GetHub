@@ -15,9 +15,11 @@ puts "now seeding"
     
 end
 
+
+
 20.times do 
 
-    Repository.create(user_id: Faker::Number.within(range: 1..10), title: Faker::App.name, description: Faker::Lorem.sentences(number: 1), repo_branch: Faker::Emotion.noun, tag: Faker::Hacker.adjective)
+    Repository.create(user_id: Faker::Number.within(range: 1..10), title: Faker::App.name, description: Faker::Lorem.sentences(number: 2), tag: Faker::Hacker.adjective)
 
 end
 
