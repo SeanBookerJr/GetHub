@@ -357,7 +357,7 @@ label {
   position: relative;
 }
 
-.repo-titles {
+/* .repo-titles {
   width: 95%;
   height: 100px;
   background: #001E3C;
@@ -366,7 +366,8 @@ label {
   position: relative;
   top: 4%;
   left: 2%;
-}
+} */
+
 .view {
   background: #001E3C;
   color: white;
@@ -376,9 +377,26 @@ label {
   border: solid 1px #265D97;
   border-radius: 11px;
   position: relative;
-  bottom: 35px;
+  bottom: 105px;
   left: 84%;
+  z-index: 10;
 }
+
+.repo-des {
+  position: relative;
+  bottom: 25%;
+  left: 5%;
+  font-weight: 200;
+}
+
+.repo-title {
+  text-align: left;
+  position: relative;
+  left: 5%;
+  bottom: 12%;
+  font-weight: 600;
+}
+
 #input-value {
   background: #132F4C;
   border-radius: 11px;

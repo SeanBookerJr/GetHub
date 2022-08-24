@@ -1,16 +1,30 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import Minirepo from './Minirepo';
 import Repo from './Repo';
 
 
 
 function Profile({user, setUser}) {
 
+    const [userRepo, setUserRepo] = useState({})
+
     let navigate = useNavigate()
 
-    function handleViewClick(event) {
-        navigate('/Repo')
-    }
+
+    useEffect(() => {
+        fetch('/userrepo')
+        .then(res => res.json())
+        .then(data => setUserRepo(data))
+    }, [])
+
+    console.log(userRepo.repositories);
+    const showRepos = userRepo.repositories
+
+    const mappedRepos =  showRepos?.map(repo => <Minirepo key={repo.id} repo={repo}/>)
+
 
     function handleLogout(e) {
         fetch('/logout', {
@@ -19,6 +33,7 @@ function Profile({user, setUser}) {
         setUser({})
         navigate('/')
       }
+    
      
     return(
         
@@ -34,13 +49,9 @@ function Profile({user, setUser}) {
             <button className="my-favorites">My Favorites</button>
         </div>
         <div className="repo-section">
-           
-            <div className="repo-titles">
-            
-                <h2>Repo Title Placeholder</h2>
-                <button className="view" onClick={handleViewClick}>View</button>
-
-            </div>
+        {mappedRepos}
+          {/* <div className="repo-titles">
+         </div> */}
         </div>
         <div className="bio">
             <h2>My Bio</h2>
