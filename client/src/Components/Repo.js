@@ -10,13 +10,13 @@ function Repo() {
         navigate('/Files')
     }
 
-    function handleReturn(e) {
+    function handleReturnClick(e) {
         navigate('/Profile')
     }
 
     return (
         <div id="repo-container">
-                    <button className="return-profile" onClick={handleReturn}>Return to Profile</button>
+                    <button className="return-profile" onClick={handleReturnClick}>Return to Profile</button>
 
             <h1>Repo Title PlaceHolder</h1>
 

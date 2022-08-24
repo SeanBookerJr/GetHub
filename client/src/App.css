@@ -309,6 +309,32 @@ h1 {
   bottom: 63%;
   left: 77%;
 }
+#profile-label {
+  position: relative;
+  top: 5%;
+  left: 5%;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+#input-bio {
+  background: #132F4C;
+  color: white;
+  border: none;
+  position: relative;
+  left: 5%;
+  top: 7%;
+  height: 70px;
+  width: 90%;
+}
+#profile-info {
+  position:relative;
+  max-width: 95%;
+  max-height: 50%;
+  left: 5%;
+  top: 4%;
+}
 .repo-section {
   width: 73%;
   height: 70%;
@@ -479,19 +505,18 @@ label {
 
 #label-file {
   position: relative;
-  top: 36%;
-  left: 2%;
+  height: 16px;
+  top: 33%;
+  left: 27.3%;
   font-size: 14px;
   border: #265D97 solid 1px;
   background: #001E3C;
-  border-radius: 5px 0 0 5px;
-  
 }
 
 #file-type {
   position: relative;
-  top: 35%;
-  left: 2%;
+  top: 32%;
+  left: 27.3%;
   background: #001E3C;
   color: white;
   border: #265D97 solid 1px;
@@ -519,4 +544,14 @@ label {
   position: relative;
   top: 10%;
 }
-
+#file-namer {
+  background: #001E3C;
+  border: solid 1px #265D97;
+  width: 25%;
+  height: 16px;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  color: white;
+  top: 32%;
+  right: 15%;
+}

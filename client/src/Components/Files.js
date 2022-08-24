@@ -19,6 +19,7 @@ function Files() {
                     <option value="js">.js</option>
                     <option value="rb">.rb</option>
                  </select>
+            <input type="text" placeholder='FileName' id="file-namer"></input>
             </div>
             <textarea className="textarea"></textarea>
             <button className="save-file" onClick={handleSaveClick}>Save File</button>

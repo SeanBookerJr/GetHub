@@ -14,6 +14,7 @@ function Signup({user, setUser}) {
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
     const [bio, setBio] = useState("")
+    const [avatar, setAvatar] = useState(null)
     const [errors, setErrors] = useState("")
 
 const handleSignUpForm = (e) => {
@@ -27,6 +28,7 @@ const handleSignUpForm = (e) => {
     formData.append("last_name", lastName)
     formData.append("email", email)
     formData.append("bio", bio)
+    formData.append("avatar", avatar)
 
     fetch('/users', {
         method: 'POST',
@@ -54,12 +56,13 @@ const handleFirstNameChange = e => setFirstName(e.target.value)
 const handleLastNameChange = e => setLastName(e.target.value)
 const handleEmailChange = e => setEmail(e.target.value)
 const handleBioChange = e => setBio(e.target.value)
+const handleChangeAvatar = e => setAvatar(e.target.value)
 
     return (
         <div className="sign-up-form">
         <form onSubmit={handleSignUpForm}>
             <h2>SIGN UP</h2>
-            <div className="upload-image"><button id="upload-image">UPLOAD IMAGE HERE</button></div>
+            <div className="upload-image" onChange={handleChangeAvatar}><button id="upload-image">UPLOAD IMAGE HERE</button></div>
             <div className="input-container-first-name">
                 <label>First Name</label>
               <br />

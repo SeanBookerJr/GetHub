@@ -44,26 +44,28 @@ function Profile({user, setUser}) {
         </div>
         <div className="bio">
             <h2>My Bio</h2>
-                <div className="profile-image"></div>
-                <label>Name:</label>
+                <div className="profile-image"><img src={user.avatar_url} alt={'an avatar!'} /></div>
+                <label id="profile-label">Name:</label>
                 {/* <input id="input-value" type="text" placeholder="Name" name="name" /> */}
-                <p>{user.first_name} {user.last_name} </p> 
+                <p id="profile-info">{user.first_name} {user.last_name} </p> 
                 <br/>
-                <label>Username:</label>
+                <label id="profile-label">Username:</label>
                 {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
-                <p>{user.username}</p>
+                <p id="profile-info">{user.username}</p>
                 <br/>
-                <label>Password:</label>
+                <label id="profile-label">Password:</label>
                 {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
-                <p>{user.password}</p>
+                <p id="profile-info">{user.password}</p>
                 <br/>
-                <label>A little about me:</label>
-                {/* <input id="input-value" type="text" placeholder="Bio" name="bio" /> */}
-                <p>{user.bio}</p>
+                <label id="profile-label">A little about me:</label>
+                <textarea id="input-bio" type="text" placeholder={user.bio} name="bio" />
+                {/* <p id="profile-info">{user.bio}</p> */}
                 <br/>
-                <label>Email Address:</label>
+                <br/>
+               
+                <label id="profile-label">Email Address:</label>
                 {/* <input id="input-value" type="text" placeholder="Email" name="email" /> */}
-                <p>{user.email}</p>
+                <p id="profile-info">{user.email}</p>
                 <br/>
 
         </div>
