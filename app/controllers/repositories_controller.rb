@@ -38,6 +38,10 @@ class RepositoriesController < ApplicationController
     @repository.destroy
   end
 
+  def attachments
+    render json: current_repo, include: :attachments
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_repository
