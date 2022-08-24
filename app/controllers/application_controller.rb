@@ -12,6 +12,10 @@ class ApplicationController < ActionController::API
     @current_user ||= User.find_by(id: session[:user_id])
      end
 
+     def current_repo
+      @current_repo ||= Repository.find_by(id: session[:user_id])
+     end
+
 
     def logged_in_user
      unless logged_in?

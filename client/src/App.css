@@ -455,11 +455,16 @@ label {
 }
 #file-name {
   width: 45%;
-  height: 55px;
+  height: 105px;
   background: #001E3C;
   border: solid 1px #265D97;
   position: relative;
   left: 5%;
+}
+
+.code {
+  z-index: 10;
+  
 }
 
 .add-file {
@@ -472,7 +477,7 @@ label {
   border-radius: 11px;
   position: relative;
   top: 30px;
-  left: 33%;
+  left: 20%;
 }
 .live-demo {
   background: #001E3C;
@@ -484,7 +489,7 @@ label {
   border-radius: 11px;
   position: relative;
   top: 30px;
-  left: 32%;
+  left: 15%;
 }
 #live-demo {
   width: 45%;
@@ -494,7 +499,7 @@ label {
   border-radius: 20px;
   position: relative;
   left: 52%;
-  bottom: 72%;
+  bottom: 50%;
 }
 
 /*Files.js*/
