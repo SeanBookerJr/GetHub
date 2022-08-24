@@ -6,6 +6,10 @@ function Repo() {
 
     let navigate = useNavigate()
 
+    function handleFileClick(e) {
+        navigate('/Files')
+    }
+
     function handleReturn(e) {
         navigate('/Profile')
     }
@@ -47,7 +51,7 @@ function Repo() {
                 
             </div>
             <button className="live-demo">Live Demo</button>
-            <button className="add-file">Add File</button>
+            <button className="add-file" onClick={handleFileClick}>Add File</button>
             <div id="live-demo">
                 <h2>We put functionality to show live preview here</h2>
             </div>

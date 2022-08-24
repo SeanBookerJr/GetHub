@@ -68,14 +68,14 @@ function Login({user, setUser}) {
             <form onSubmit={handleLogin}>
                 <h2>LOGIN/SIGN UP</h2>
                 <div className="input-container-username">
-                    <label>Username </label>
+                    <label id="login-text">Username </label>
                   <br />
                   <br />
                     <input value={username} onChange={handleUsernameChange} id="username" type="text" placeholder="USERNAME" name="uname" required />
                         {/* {renderErrorMessage("uname")} */}
        </div>
        <div className="input-container-password">
-            <label>Password </label>
+            <label id="login-text">Password </label>
             <br />
             <br />
                 <input value={password} onChange={handlePasswordChange} id="password" type="password" placeholder="PASSWORD" name="pass" required />
