@@ -19,7 +19,6 @@ function Profile({user, setUser}) {
         setUser({})
         navigate('/')
       }
-    
      
     return(
         
