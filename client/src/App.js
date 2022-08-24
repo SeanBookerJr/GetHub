@@ -7,7 +7,8 @@ import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Profile from './Components/Profile';
 import Repo from './Components/Repo';
-import Files from './Components/Files'
+import Files from './Components/Files';
+import Minirepo from './Components/Minirepo';
 
 function App() {
 
@@ -32,8 +33,10 @@ function App() {
       <Route path="/" element={<Login user={user} setUser={setUser}/>} />
       <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
       <Route path="/Repo" element={<Repo />} />
+      <Route path="/Minirepo" element={<Minirepo user={user} setUser={setUser} />} />
       <Route path="/Profile" element={<Profile user={user} setUser={setUser} />} />
       <Route path="/Files" element={<Files />} />
+      
     </Routes>
   </BrowserRouter>
   );

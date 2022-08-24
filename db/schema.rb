@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_143913) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer "repository_id"
+    t.integer "user_id"
     t.string "name"
     t.string "code"
     t.datetime "created_at", precision: 6, null: false
