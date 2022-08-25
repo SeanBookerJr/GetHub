@@ -11,7 +11,7 @@ puts "now seeding"
 
 10.times do
     
-    User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::App.name, password_digest: Faker::Alphanumeric.alphanumeric(number: 10), email: Faker::Internet.email, bio: Faker::Lorem.sentences(number: 1))
+    User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::App.name, password_digest: Faker::Alphanumeric.alphanumeric(number: 10), email: Faker::Internet.email, bio: Faker::Lorem.sentences(number: 1), avatar_url: Faker::Avatar.image())
     
 end
 

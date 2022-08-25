@@ -2,6 +2,7 @@ class UserSerializer < ActiveModel::Serializer
 
   attributes :id, :username, :password_digest, :first_name, :last_name, :email, :bio, :avatar_url
   has_many :repositories
+  has_many :attachments
   # , :avatar_url
 
   # Rails.application.routes.url_helpers.rails_blob_path()

@@ -17,6 +17,7 @@ function Repo() {
     }, [])
   console.log(files)
   const fileAttach = files.attachments
+  
     return (
         <div id="repo-container">
                     <button className="return-profile" onClick={handleReturnClick}>Return to Profile</button>

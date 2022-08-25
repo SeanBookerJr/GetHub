@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_143913) do
     t.string "last_name"
     t.string "email"
     t.string "bio"
+    t.string "avatar_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

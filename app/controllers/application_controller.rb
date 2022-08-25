@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
      end
 
      def current_repo
-      @current_repo ||= Repository.find_by(id: session[:user_id])
+      @current_repo ||= User.find_by(id: session[:user_id])
      end
 
 
