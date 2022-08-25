@@ -1,15 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 
-
-
 function Minirepo({repo}) {
-
     let navigate = useNavigate()
-
     function handleViewClick(event) {
         navigate('/Repo')
     }
+    console.log(repo.id)
     return (
         <div id="mini-repo-container">
             <h2 className='repo-title'>{repo.title}</h2>
@@ -18,7 +15,6 @@ function Minirepo({repo}) {
             <button onClick={handleViewClick} className='view'>view</button>
         </div>
     )
-
 }
 
 export default Minirepo
