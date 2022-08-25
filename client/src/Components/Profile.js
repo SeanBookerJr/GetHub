@@ -7,8 +7,8 @@ import Repo from './Repo';
 
 
 
-function Profile({user, setUser}) {
-
+function Profile({user, setUser,setRepoPage}) {
+    
     const [userRepo, setUserRepo] = useState({})
 
     let navigate = useNavigate()
@@ -17,14 +17,14 @@ function Profile({user, setUser}) {
     useEffect(() => {
         fetch('/userrepo')
         .then(res => res.json())
-        .then(data => setUserRepo(data))
+        .then(data => {
+            setUserRepo(data)
+            setRepoPage(data.repositories)
+        })
     }, [])
 
-    console.log(userRepo.repositories);
-    const showRepos = userRepo.repositories
 
-    const mappedRepos =  showRepos?.map(repo => <Minirepo key={repo.id} repo={repo}/>)
-
+ 
 
     function handleLogout(e) {
         fetch('/logout', {
@@ -49,7 +49,7 @@ function Profile({user, setUser}) {
             <button className="my-favorites">My Favorites</button>
         </div>
         <div className="repo-section">
-        {mappedRepos}
+        {userRepo["repositories"] ? userRepo.repositories.map(repo => <Minirepo key={repo.id} repo={repo}/> ): ""}
           {/* <div className="repo-titles">
          </div> */}
         </div>

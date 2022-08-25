@@ -1,9 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 
-function Repo() {
+function Repo({repo}) {
+
+    let params = useParams()
 
     let navigate = useNavigate()
 
@@ -18,15 +20,23 @@ function Repo() {
     }
 
     useEffect(() => {
-        fetch('/repoattachments')
-        .then(res => res.json())
-        .then(data => setFiles(data))
+
+     fetch(`/specificattachments/${params.id}`)
+      .then(res => res.json())
+      .then(data =>{
+        console.log(data);
+        setFiles(data)
+      })
     }, [])
 
+     console.log(files.attachments)
 
-  console.log(files)
+     const attachments = files.attachments
+
+     
   
-  const fileAttach = files.attachments
+  
+//   const fileAttach = files.attachments
     
 
     return (
@@ -39,7 +49,7 @@ function Repo() {
                 <h2>Your Name PlaceHolder</h2>
             </div>
             <div className='files-in-repo'>
-            {fileAttach?.map(file => {
+            {attachments?.map(file => {
                 return(
                  <div key={file.id} id="file-name">
                     <h2>{file.name}</h2>

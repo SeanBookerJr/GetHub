@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useNavigate } from 'react-router';
 
 
@@ -8,11 +8,12 @@ function Minirepo({repo}) {
     let navigate = useNavigate()
 
     function handleViewClick(event) {
-        navigate('/Repo')
+
+         navigate(`/Repo/${repo.id}`)
 
     }
 
-    console.log(repo.id)
+ 
 
     return (
         <div id="mini-repo-container">

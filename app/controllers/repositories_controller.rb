@@ -1,5 +1,5 @@
 class RepositoriesController < ApplicationController
-  before_action :set_repository, only: [:show, :update, :destroy]
+  before_action :set_repository, only: [:show, :update, :destroy, :specific]
 
   # GET /repositories
   def index
@@ -10,6 +10,10 @@ class RepositoriesController < ApplicationController
 
   # GET /repositories/1
   def show
+    render json: @repository
+  end
+
+  def specific
     render json: @repository
   end
 

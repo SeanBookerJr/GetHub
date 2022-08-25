@@ -13,7 +13,7 @@ import Minirepo from './Components/Minirepo';
 function App() {
 
   const [user, setUser] = useState({})
-
+  const [repoPage, setRepoPage] = useState([])
   useEffect( () => {
     fetch('/me')
     .then(res => {
@@ -26,15 +26,23 @@ function App() {
     })
   }, [])
 
+  useEffect(() => {
+  if(repoPage.length != 0 ){
+    console.log("Repos : ", repoPage)
+  }
+  
+  }, [repoPage])
+  
+
 
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login user={user} setUser={setUser}/>} />
       <Route path="/Signup" element={<Signup user={user} setUser={setUser} />} />
-      <Route path="/Repo" element={<Repo />} />
-      <Route path="/Minirepo" element={<Minirepo user={user} setUser={setUser} />} />
-      <Route path="/Profile" element={<Profile user={user} setUser={setUser} />} />
+      <Route path="/Repo/:id" element={<Repo repo={repoPage} />} />
+      {/* <Route path="/Minirepo" element={<Minirepo  setRepoPage={setRepoPage} user={user} setUser={setUser} />} /> */}
+      <Route path="/Profile" element={<Profile user={user} setUser={setUser} setRepoPage={setRepoPage}/>} />
       <Route path="/Files" element={<Files />} />
       
     </Routes>

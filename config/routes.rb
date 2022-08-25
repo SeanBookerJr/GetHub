@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   #repositories
   get '/repoattachments', to:'repositories#attachments'
+  get '/specificattachments/:id', to:'repositories#specific'
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
