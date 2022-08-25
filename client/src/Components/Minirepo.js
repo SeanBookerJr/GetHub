@@ -7,15 +7,12 @@ function Minirepo({repo}) {
 
     let navigate = useNavigate()
 
-    function handleViewClick(repo) {
-   
-         navigate('/Repo')
+    function handleViewClick(event) {
+        navigate('/Repo')
 
     }
 
     console.log(repo.id)
-    console.log(repo)
-    
 
     return (
         <div id="mini-repo-container">

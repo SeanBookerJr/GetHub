@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import gethub from '../images/gethub.png'
 
 
 function Login({user, setUser}) {
@@ -63,7 +64,9 @@ function Login({user, setUser}) {
 
     return (
         // logo
-
+        <div>
+          <img src={gethub} alt="gethub logo" id="logo-img"/>
+          <h2 id="app-name">//GEThub</h2>
         <div className="login-card">
             <form onSubmit={handleLogin}>
                 <h2>LOGIN/SIGN UP</h2>
@@ -88,6 +91,7 @@ function Login({user, setUser}) {
            <button className="signup" onClick={handleSignUpClick}>Sign Up</button>
        </div>
                 </form>
+        </div>
         </div>
     )
 

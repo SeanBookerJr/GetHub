@@ -62,7 +62,7 @@ const handleChangeAvatar = e => setAvatar(e.target.value)
         <div className="sign-up-form">
         <form onSubmit={handleSignUpForm}>
             <h2>SIGN UP</h2>
-            <div className="upload-image" onChange={handleChangeAvatar}><button id="upload-image">UPLOAD IMAGE HERE</button></div>
+            <div className="upload-image" onChange={handleChangeAvatar}><img src={user.avatar_url} alt={'an avatar!'}/></div>
             <div className="input-container-first-name">
                 <label>First Name</label>
               <br />
