@@ -95,6 +95,19 @@ h2 {
   left: 32%;
 }
 
+.image-input-file {
+  background: #007FFF;
+  color: white;
+  width: 120px;
+  letter-spacing: 2px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  top: 20px;
+}
+
 .input-container-first-name {
   max-width: 75%;
   justify-content: center;
@@ -213,15 +226,16 @@ h2 {
   border: solid 1px #265D97;
   border-radius: 11px;
   position: relative;
-  top: 20px;
+  top: 10px;
 }
 .upload-image {
   height: 120px;
   width: 120px;
   position: relative;
-  left: 400px;
+  left: 440px;
   top: 40px;
-
+  border: solid 1px #265D97;
+  border-radius: 50%;
 }
 
 #upload-image {
@@ -232,8 +246,23 @@ h2 {
   background: #001E3C;
   color: white;
   border: solid 1px #265D97;
-  font-style: italic;
 }
+#input-file {
+  position: relative;
+  top: 50px;
+  left: 77%;
+}
+#img-preview {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.fileInput {
+  cursor: pointer;
+  color: #001E3C;
+}
+
+
 /*Profile*/
 
 
@@ -527,7 +556,7 @@ label {
   border-radius: 20px;
   position: relative;
   left: 52%;
-  bottom: 100%;
+  bottom: 62%;
 }
 
 /*Files.js*/

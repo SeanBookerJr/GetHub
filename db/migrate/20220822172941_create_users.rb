@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.string :email
       t.string :bio
+      t.string :avatar_url
+      
 
       t.timestamps
     end

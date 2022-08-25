@@ -3,22 +3,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 
-function Repo({repo}) {
-
+function Repo() {
     let params = useParams()
-
     let navigate = useNavigate()
-
     const [files, setFiles] = useState({})
-
     function handleFileClick(e) {
         navigate('/Files')
     }
-
     function handleReturnClick(e) {
         navigate('/Profile')
     }
-
     useEffect(() => {
 
      fetch(`/specificattachments/${params.id}`)
@@ -32,19 +26,11 @@ function Repo({repo}) {
      console.log(files.attachments)
 
      const attachments = files.attachments
-
-     
-  
-  
-//   const fileAttach = files.attachments
     
-
     return (
         <div id="repo-container">
                     <button className="return-profile" onClick={handleReturnClick}>Return to Profile</button>
-            
             <h1>Repo Title PlaceHolder</h1>
-            
             <div id="repo-header">
                 <h2>Your Name PlaceHolder</h2>
             </div>
@@ -62,10 +48,7 @@ function Repo({repo}) {
             <div id="live-demo">
                 <h2>We put functionality to show live preview here</h2>
             </div>
-
         </div>
     )
-
 }
-
 export default Repo

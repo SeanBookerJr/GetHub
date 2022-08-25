@@ -16,6 +16,13 @@ function Signup({user, setUser}) {
     const [bio, setBio] = useState("")
     const [avatar, setAvatar] = useState(null)
     const [errors, setErrors] = useState("")
+    const [file, setFile] = useState();
+
+    function handleImageChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
+    
 
 const handleSignUpForm = (e) => {
 
@@ -29,6 +36,7 @@ const handleSignUpForm = (e) => {
     formData.append("email", email)
     formData.append("bio", bio)
     formData.append("avatar", avatar)
+    
 
     fetch('/users', {
         method: 'POST',
@@ -41,7 +49,7 @@ const handleSignUpForm = (e) => {
                     console.log(data)
                     setErrors([])
                     setUser(data)
-                    navigate('./Profile')
+                    navigate('/Profile')
                 })
             } else {
                 res.json()
@@ -56,13 +64,22 @@ const handleFirstNameChange = e => setFirstName(e.target.value)
 const handleLastNameChange = e => setLastName(e.target.value)
 const handleEmailChange = e => setEmail(e.target.value)
 const handleBioChange = e => setBio(e.target.value)
-const handleChangeAvatar = e => setAvatar(e.target.value)
+const handleChangeAvatar = e => {
+    setFile(URL.createObjectURL(e.target.files[0]));
+    setAvatar(e.target.files[0])
+}
+
+
 
     return (
         <div className="sign-up-form">
         <form onSubmit={handleSignUpForm}>
             <h2>SIGN UP</h2>
-            <div className="upload-image" onChange={handleChangeAvatar}><img src={user.avatar_url} alt={'an avatar!'}/></div>
+            <div className="upload-image"><img src={file} id="img-preview"/></div>
+            <div id="input-file">
+                <input className="fileInput" type="file" onChange={handleChangeAvatar}/>
+                </div>
+            {/* <img src={avatar_url} alt={'an avatar!'}/> */}
             <div className="input-container-first-name">
                 <label>First Name</label>
               <br />
