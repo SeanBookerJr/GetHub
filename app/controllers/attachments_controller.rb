@@ -17,11 +17,8 @@ class AttachmentsController < ApplicationController
   def create
     @attachment = Attachment.new(attachment_params)
 
-    if @attachment.save
+     @attachment.save
       render json: @attachment, status: :created, location: @attachment
-    else
-      render json: @attachment.errors, status: :unprocessable_entity
-    end
   end
 
   # PATCH/PUT /attachments/1

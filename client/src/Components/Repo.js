@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 
-function Repo() {
+function Repo({setMoveFiles}) {
     let params = useParams()
     let navigate = useNavigate()
     const [files, setFiles] = useState({})
@@ -19,20 +19,20 @@ function Repo() {
       .then(res => res.json())
       .then(data =>{
         console.log(data);
-        setFiles(data)
+        setFiles(data);
+         setMoveFiles(data)
       })
     }, [])
 
-     console.log(files.attachments)
 
      const attachments = files.attachments
-    
+
     return (
         <div id="repo-container">
                     <button className="return-profile" onClick={handleReturnClick}>Return to Profile</button>
-            <h1>Repo Title PlaceHolder</h1>
+            <h1>{files.title}</h1>
             <div id="repo-header">
-                <h2>Your Name PlaceHolder</h2>
+                <h2>Files</h2>
             </div>
             <div className='files-in-repo'>
             {attachments?.map(file => {

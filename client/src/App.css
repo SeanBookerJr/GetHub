@@ -373,6 +373,19 @@ h1 {
   width: 90%;
   resize: none;
 }
+.input-update {
+  background: #132F4C;
+  color: white;
+  border: none;
+  position: relative;
+  left: 5%;
+  top: 7%;
+  height: 30px;
+  width: 90%;
+  resize: none;
+}
+
+
 #profile-info {
   position:relative;
   max-width: 95%;
