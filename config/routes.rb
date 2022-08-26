@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   resources :attachments
   resources :repositories
-  resources :users, only: [:create]
+  resources :users, only: [:create, :update]
 
   #session
   get '/me', to: 'sessions#show'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 #users
   get '/userrepo', to: 'users#repos'
-
+  
 
   #repositories
   get '/repoattachments', to:'repositories#attachments'

@@ -361,6 +361,33 @@ h1 {
   width: 90%;
   resize: none;
 }
+.input-update {
+  background: #132F4C;
+  color: white;
+  border: none;
+  position: relative;
+  left: 5%;
+  top: 7%;
+  height: 30px;
+  width: 90%;
+  resize: none;
+}
+
+.update-button {
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  background: #007FFF;
+  top: 35px;
+  left: 29%;
+
+}
+
+
 #profile-info {
   position:relative;
   max-width: 95%;
@@ -395,6 +422,13 @@ h1 {
   border-radius: 50%;
   background: #001E3C;
   margin: 0 auto;
+}
+
+#profile-image-transfer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
 }
 #profile-image-inside {
   width: 100px;
