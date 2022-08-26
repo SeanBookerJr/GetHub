@@ -8,7 +8,7 @@ import Signup from './Components/Signup';
 import Profile from './Components/Profile';
 import Repo from './Components/Repo';
 import Files from './Components/Files';
-import Minirepo from './Components/Minirepo';
+import CreateRepo from './Components/CreateRepo';
 
 function App() {
 
@@ -50,6 +50,7 @@ console.log(moveFiles)
       {/* <Route path="/Minirepo" element={<Minirepo  setRepoPage={setRepoPage} user={user} setUser={setUser} />} /> */}
       <Route path="/Profile" element={<Profile user={user} setUser={setUser} setRepoPage={setRepoPage}/>} />
       <Route path="/Files" element={<Files moveFiles={moveFiles} setMoveFiles={setMoveFiles} />} />
+      <Route path="/Createrepo" element={<CreateRepo />} />
       
     </Routes>
   </BrowserRouter>
