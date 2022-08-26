@@ -311,6 +311,18 @@ h2 {
   bottom: 15px;
   left: 3%;
 }
+.create-repo {
+  background: #132F4C;
+  border-radius: 11px;
+  color: white;
+  border: solid 1px #265D97;
+  position: relative;
+  left: 75%;
+  height: 35px;
+  width: 120px;
+  font-size: 16px;
+  bottom: 33%;
+}
 h1 {
   position: relative;
   left: 3%;
@@ -582,9 +594,9 @@ label {
   background: #132F4C;
   border: solid 1px #265D97;
   border-radius: 20px;
-  position: relative;
+  position: absolute;
   left: 52%;
-  bottom: 62%;
+  top: 13.5%;
 }
 
 /*Files.js*/
@@ -662,4 +674,67 @@ label {
   color: white;
   top: 32%;
   right: 15%;
+}
+
+/*CreateRepo.js*/
+
+.create-repo-div {
+  max-width: 1400px;
+  height: 850px;
+  border: solid 1px #265D97;
+  background: #001E3C;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+.create-repo-header {
+  width: 75%;
+  height: 65px;
+  background: #132F4C;
+  border: solid 1px #265D97;
+  position: relative;
+  top: 5%;
+  border-radius: 20px 20px 0 0;
+  margin: 0 auto;
+}
+#repo-name {
+  position: relative;
+  width: 40%;
+  background: #001E3C;
+  color: white;
+  border-radius: 15px;
+  border: solid 1px #265D97;
+  height:35px;
+  top: 21%;
+  left: 2%;
+}
+.create-repo-textarea {
+  position: relative;
+  width: 74.7%;
+  height: 35%;
+  background: #001E3C;
+  border: #265D97 solid 1px;
+  left: 12.4%;
+  resize: none;
+  color: white;
+}
+.create-repo-button {
+  background: #001E3C;
+  color: white;
+  width: 120px;
+  height: 35px;
+  font-size: 16px;
+  border: solid 1px #265D97;
+  border-radius: 11px;
+  position: relative;
+  top: 8%;
+}
+#readme {
+  width: 75%;
+  border: solid 1px #265D97;
+  background: #132F4C;
+  position: relative;
+  left: 12.4%;
+  top: 3vh;
 }

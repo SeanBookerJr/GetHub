@@ -84,7 +84,7 @@ function Profile({user, setUser,setRepoPage}) {
         <input value={query} onChange={((e) => setQuery(e.target.value))} id="search" placeholder="Search" type="text"></input>
         <button id="search-button">Search</button>
         </div>
-            <button onClick={() =>navigate('/CreateRepo')} className="my-favorites">Create Repo</button>
+            <button onClick={() =>navigate('/CreateRepo')} className="create-repo">Create Repo</button>
             
         </div>
         
