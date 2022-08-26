@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import CreateRepo from './CreateRepo';
 import Minirepo from './Minirepo';
 import Repo from './Repo';
 
@@ -11,11 +12,11 @@ function Profile({user, setUser,setRepoPage}) {
     const [userRepo, setUserRepo] = useState({
         repositories: []
     })
-    const [query, setQuery] = useState({})
+    const [query, setQuery] = useState("")
     const [holder, setHolder] = useState({})
 
-    const [username, setUsername] = useState('')
-    const [bio, setBio] = useState('')
+    const [username, setUsername] = useState(user.name)
+    const [bio, setBio] = useState(user.bio)
 
     console.log(userRepo)
 
@@ -33,9 +34,9 @@ function Profile({user, setUser,setRepoPage}) {
     }, [])
 
      
-    
+    console.log(userRepo.repositories)
 
-    //const filteredRepos = userRepo.repositories.filter(singleRepo => singleRepo.title.toLowerCase().includes(query.toLowerCase()))
+    const filteredRepos = userRepo.repositories.filter(singleRepo => singleRepo.title.toLowerCase().includes(query.toLowerCase()))
 
 
     const handleInfoUpdate = (e) => {
@@ -83,10 +84,12 @@ function Profile({user, setUser,setRepoPage}) {
         <input value={query} onChange={((e) => setQuery(e.target.value))} id="search" placeholder="Search" type="text"></input>
         <button id="search-button">Search</button>
         </div>
-    
+            <button onClick={() =>navigate('/CreateRepo')} className="my-favorites">Create Repo</button>
+            
         </div>
+        
         <div className="repo-section">
-        {userRepo["repositories"] ? userRepo.repositories.map(repo => <Minirepo key={repo.id} repo={repo}/> ): ""}
+        {userRepo["repositories"] ? filteredRepos.map(repo => <Minirepo key={repo.id} repo={repo}/> ): ""}
           {/* <div className="repo-titles">
          </div> */}
         </div>
