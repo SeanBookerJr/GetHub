@@ -316,18 +316,6 @@ h1 {
   left: 3%;
   font-weight: 300;
 }
-.my-favorites {
-  background: #001E3C;
-  color: white;
-  width: 120px;
-  height: 35px;
-  font-size: 16px;
-  border: solid 1px #265D97;
-  border-radius: 11px;
-  position: relative;
-  bottom: 50px;
-  left: 74%;
-}
 
 .logout {
   background: #001E3C;
@@ -407,6 +395,12 @@ h1 {
   border-radius: 50%;
   background: #001E3C;
   margin: 0 auto;
+}
+#profile-image-inside {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
 }
 
 label {

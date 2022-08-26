@@ -6,9 +6,7 @@ import Minirepo from './Minirepo';
 import Repo from './Repo';
 
 
-
 function Profile({user, setUser,setRepoPage}) {
-    
     const [userRepo, setUserRepo] = useState({})
     let navigate = useNavigate()
     useEffect(() => {
@@ -19,8 +17,6 @@ function Profile({user, setUser,setRepoPage}) {
             setRepoPage(data.repositories)
         })
     }, [])
-
-
     function handleLogout(e) {
         fetch('/logout', {
           method: 'DELETE'
@@ -37,7 +33,7 @@ function Profile({user, setUser,setRepoPage}) {
         <input id="search" placeholder="Search" type="text"></input>
         <button id="search-button">Search</button>
         </div>
-            <button className="my-favorites">My Favorites</button>
+    
         </div>
         <div className="repo-section">
         {userRepo["repositories"] ? userRepo.repositories.map(repo => <Minirepo key={repo.id} repo={repo}/> ): ""}
@@ -46,7 +42,7 @@ function Profile({user, setUser,setRepoPage}) {
         </div>
         <div className="bio">
             <h2>My Bio</h2>
-                <div className="profile-image"><img src={user.avatar_url} alt={'an avatar!'} /></div>
+                <div className="profile-image"><img src={user.avatar_url} alt={'an avatar!'} id="profile-image-inside"/></div>
                 <label id="profile-label">Name:</label>
                 {/* <input id="input-value" type="text" placeholder="Name" name="name" /> */}
                 <p id="profile-info">{user.first_name} {user.last_name} </p>
@@ -73,3 +69,12 @@ function Profile({user, setUser,setRepoPage}) {
 )
 }
 export default Profile
+
+
+
+
+
+
+
+
+
